@@ -31,6 +31,15 @@ function App() {
     e.preventDefault();
     dispatch(updatepeople({ edit, idholder }));
   };
+  const arr = [
+    { AGENT: "Rowel", y: "Knife", "ITEM 2": "Gun" },
+    { AGENT: "Andy", y: "Scissor", "ITEM 2": "Pen" },
+    { AGENT: "Emer", y: "Stone", "ITEM 2": "Sand" },
+  ];
+
+  let res = arr.map(({ y, ...rest }) => ({ ...rest }));
+
+  console.log(res);
   return (
     <div className="App">
       {counter}
